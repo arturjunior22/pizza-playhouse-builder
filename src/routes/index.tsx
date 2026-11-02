@@ -216,10 +216,11 @@ function Index() {
                   className="mb-3 w-full rounded-xl border-2 border-input bg-background/0 px-4 py-3 outline-none focus:border-ring" />
                 <input required type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Telemóvel"
                   className="w-full rounded-xl border-2 border-input bg-background/0 px-4 py-3 outline-none focus:border-ring" />
+                {error && <p className="mt-3 text-sm font-bold text-destructive">{error}</p>}
                 <div className="mt-6 flex gap-3">
                   <button type="button" onClick={() => setStep("ingredientes")} className="rounded-full border-2 border-border px-5 py-3 font-bold">←</button>
                   <button type="submit" disabled={baking} className="flex-1 rounded-full bg-primary py-3 font-bold text-primary-foreground transition hover:brightness-110">
-                    Enviar para o forno 🔥
+                    {baking ? "A enviar..." : "Enviar para o forno 🔥"}
                   </button>
                 </div>
               </form>
