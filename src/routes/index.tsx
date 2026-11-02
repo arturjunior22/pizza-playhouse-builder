@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { placeOrder } from "@/lib/orders.functions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -92,7 +94,9 @@ function Index() {
   const total = BASE_PRICE + (sauce?.price ?? 0) + toppings.reduce((s, id) => s + TOPPINGS.find((t) => t.id === id)!.price, 0);
   const toggle = (id: string) => setToppings((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
 
-  const send = (e: React.FormEvent) => {
+  const submitOrder = useServerFn(placeOrder);
+  const [error, setError] = useState("");
+  const send = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setBaking(true);
