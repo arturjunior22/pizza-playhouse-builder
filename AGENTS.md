@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Pizza order prices are recomputed server-side in src/lib/orders.functions.ts; keep its price tables in sync with the menu in src/routes/index.tsx (client totals are display-only).
