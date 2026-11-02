@@ -53,7 +53,7 @@ function scatter(seed: number, count: number) {
   return pts;
 }
 
-function Pizza({ sauce, toppings, baking }: { sauce?: Sauce; toppings: string[]; baking: boolean }) {
+function Pizza({ sauce, toppings, baking }: { sauce: Sauce | undefined; toppings: string[]; baking: boolean }) {
   const layers = useMemo(
     () =>
       toppings.map((id, i) => {
