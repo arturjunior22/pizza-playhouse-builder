@@ -94,8 +94,18 @@ function Index() {
 
   const send = (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
     setBaking(true);
-    setTimeout(() => setStep("enviado"), 900);
+    try {
+      await Promise.all([
+        submitOrder({ data: { name, phone, sauce: sauce!.id, toppings } }),
+        new Promise((r) => setTimeout(r, 900)),
+      ]);
+      setStep("enviado");
+    } catch {
+      setBaking(false);
+      setError("Não foi possível enviar o pedido. Verifica o nome e o telemóvel e tenta de novo.");
+    }
   };
 
   const reset = () => { setStep("molho"); setSauce(undefined); setToppings([]); setBaking(false); setName(""); setPhone(""); };
