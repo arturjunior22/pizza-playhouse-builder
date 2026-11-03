@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Pizza Playhouse Builder
+
+Boas, quero fazer um site para uma pizzaria. A minha ideia é fazer uma página interaiva, começemos só por aí, esta tem de ser parecida a um jogo de fazer pizzas, temos a massa da pizza inical, o cliente escolhe o molho, os topings e quando acaba a pizza o pedido é enviado ao restaurante. Quero que o ambiente seja tipo o de uma pizzaria acolhedora.
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/886d5da2-c211-4908-8360-d33541e4ee66).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
